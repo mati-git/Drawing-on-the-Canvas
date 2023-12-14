@@ -1,0 +1,54 @@
+﻿<Window x:Class="Drawing_on_the_Canvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Drawing_on_the_Canvas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="209*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Canvas Name="paintSurface"
+                MouseDown="Canvas_MouseDown"
+                MouseMove="Canvas_MouseMove"
+                Grid.Column="1" HorizontalAlignment="Center" Width="390" Height="400" VerticalAlignment="Top" Margin="0,18,0,0" >
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="LeftRibbon" Grid.RowSpan="2" HorizontalAlignment="Center" Width="200" Height="434" VerticalAlignment="Bottom">
+            <Button Content="Clear" Height="37" Canvas.Left="32" Canvas.Top="375" Width="136" Background="#FFDC4738" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnClear_Click"/>
+            <Button x:Name="btnPenRed1" Content="" Height="20" Width="20" Canvas.Left="32" Canvas.Top="76"  Background="#FFFF7878" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnPenColour_Click"/>
+            <Button x:Name="btnPenYellow1" Content="" Height="20" Width="20" Canvas.Left="57" Canvas.Top="76"  Background="#FFFFFFAA" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedGreen1" Content="" Height="20" Width="20" Canvas.Left="82" Canvas.Top="76"  Background="#FFAAFFAA" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedBlue1" Content="" Height="20" Width="20" Canvas.Left="107" Canvas.Top="76"  Background="#FFAAAAFF" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenWhite" Content="" Height="20" Width="20" Canvas.Left="32" Canvas.Top="211"  Background="White" Click="btnPenColour_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenBlack" Content="" Height="20" Width="20" Canvas.Left="32" Canvas.Top="186"  Background="Black" Click="btnPenColour_Click" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.277,-0.449"/>
+            <Button x:Name="btnPenRed2" Content="" Height="20" Width="20" Canvas.Left="32" Canvas.Top="101"  Background="#FFFF4646" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenYellow2" Content="" Height="20" Width="20" Canvas.Left="57" Canvas.Top="101"  Background="#FFFFFF46" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedGreen2" Content="" Height="20" Width="20" Canvas.Left="82" Canvas.Top="101"  Background="#FF46FF46" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedBlue2" Content="" Height="20" Width="20" Canvas.Left="107" Canvas.Top="101"  Background="#FF4646FF" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRed3" Content="" Height="20" Width="20" Canvas.Left="32" Canvas.Top="126"  Background="#FFFF0505" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenYellow3" Content="" Height="20" Width="20" Canvas.Left="57" Canvas.Top="126"  Background="Yellow" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedGreen3" Content="" Height="20" Width="20" Canvas.Left="82" Canvas.Top="126"  Background="Lime" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedBlue3" Content="" Height="20" Width="20" Canvas.Left="107" Canvas.Top="126"  Background="#FF0046FF" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRed4" Content="" Height="20" Width="20" Canvas.Left="32" Canvas.Top="151"  Background="#FFA00000" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenYellow4" Content="" Height="20" Width="20" Canvas.Left="57" Canvas.Top="151"  Background="#FFA0A005" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedGreen4" Content="" Height="20" Width="20" Canvas.Left="82" Canvas.Top="151"  Background="#FF00A000" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenRedBlue4" Content="" Height="20" Width="20" Canvas.Left="107" Canvas.Top="151"  Background="#FF0000A0" Click="btnPenColour_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnPenDraw" Content="Pen" Height="26" Canvas.Left="31" Canvas.Top="261" Width="61" Click="btnPenDraw_Click"/>
+            <Button x:Name="btnSmileyDraw" Content="Smiley" Height="26" Canvas.Left="31" Canvas.Top="292" Width="61" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
+
+    </Grid>
+
+</Window>
